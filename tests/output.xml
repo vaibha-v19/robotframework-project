@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-05-06T11:35:36.403257" rpa="false" schemaversion="5">
+<suite id="s1" name="Nav Test" source="C:\Users\z0053u3m\PycharmProjects\PythonProject1\tests\nav_test.robot">
+<test id="s1-t1" name="Test Contact Link" line="13">
+<kw name="Open Browser And Navigate To URL" owner="base">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:35:36.706852" level="INFO">Opening browser 'chrome' to base url 'https://tutorialsninja.com/demo'.</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-06T11:35:36.706383" elapsed="3.317988"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-06T11:35:40.024627" elapsed="0.032265"/>
+</kw>
+<arg>https://tutorialsninja.com/demo</arg>
+<status status="PASS" start="2025-05-06T11:35:36.705656" elapsed="3.351491"/>
+</kw>
+<kw name="Click Contact Link And Verify" owner="nav">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:35:40.060824" level="INFO">Clicking element 'xpath=//a[@href='https://tutorialsninja.com/demo/index.php?route=information/contact']'.</msg>
+<arg>${CONTACT_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T11:35:40.058093" elapsed="0.342651"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:35:40.413494" level="INFO">${current_url} = https://tutorialsninja.com/demo/index.php?route=information/contact</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2025-05-06T11:35:40.401029" elapsed="0.012557"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-06T11:35:40.414180" level="INFO">Contact page URL: https://tutorialsninja.com/demo/index.php?route=information/contact</msg>
+<arg>Contact page URL: ${current_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-06T11:35:40.413889" elapsed="0.000372"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>https://tutorialsninja.com/demo/index.php?route=information/contact</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-05-06T11:35:40.414435" elapsed="0.000229"/>
+</kw>
+<status status="PASS" start="2025-05-06T11:35:40.057701" elapsed="0.357140"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-06T11:35:40.415183" elapsed="3.362647"/>
+</kw>
+<doc>Verify the contact link functionality.</doc>
+<status status="PASS" start="2025-05-06T11:35:36.704994" elapsed="7.073913"/>
+</test>
+<test id="s1-t2" name="Test My Account Dropdown" line="20">
+<kw name="Open Browser And Navigate To URL" owner="base">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:35:43.783683" level="INFO">Opening browser 'chrome' to base url 'https://tutorialsninja.com/demo'.</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-06T11:35:43.783266" elapsed="3.373122"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-06T11:35:47.156808" elapsed="0.042373"/>
+</kw>
+<arg>https://tutorialsninja.com/demo</arg>
+<status status="PASS" start="2025-05-06T11:35:43.782558" elapsed="3.416777"/>
+</kw>
+<kw name="Click My Account Dropdown And Verify Links" owner="nav">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:35:47.200479" level="INFO">Clicking element '//a[@title='My Account']'.</msg>
+<arg>${MY_ACCOUNT_DROPDOWN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T11:35:47.200210" elapsed="0.102549"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${REGISTER_LINK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-06T11:35:47.303045" elapsed="0.023039"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:35:47.327145" level="INFO">Clicking element 'xpath=//a[@href='https://tutorialsninja.com/demo/index.php?route=account/register']'.</msg>
+<arg>${REGISTER_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T11:35:47.326527" elapsed="0.458491"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:35:47.792430" level="INFO">${register_url} = https://tutorialsninja.com/demo/index.php?route=account/register</msg>
+<var>${register_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2025-05-06T11:35:47.785233" elapsed="0.007248"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-06T11:35:47.792786" level="INFO">Register page URL: https://tutorialsninja.com/demo/index.php?route=account/register</msg>
+<arg>Register page URL: ${register_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-06T11:35:47.792632" elapsed="0.000198"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${register_url}</arg>
+<arg>https://tutorialsninja.com/demo/index.php?route=account/register</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-05-06T11:35:47.792919" elapsed="0.000137"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-06T11:35:47.793138" elapsed="0.022074"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:35:47.816036" level="INFO">Clicking element '//a[@title='My Account']'.</msg>
+<arg>${MY_ACCOUNT_DROPDOWN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T11:35:47.815566" elapsed="0.048946"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:35:47.864873" level="INFO">Clicking element 'xpath=//a[@href='https://tutorialsninja.com/demo/index.php?route=account/login']'.</msg>
+<arg>${LOGIN_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T11:35:47.864679" elapsed="0.240304"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:35:48.111240" level="INFO">${login_url} = https://tutorialsninja.com/demo/index.php?route=account/login</msg>
+<var>${login_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2025-05-06T11:35:48.105165" elapsed="0.006145"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-06T11:35:48.111850" level="INFO">Login page URL: https://tutorialsninja.com/demo/index.php?route=account/login</msg>
+<arg>Login page URL: ${login_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-06T11:35:48.111564" elapsed="0.000365"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${login_url}</arg>
+<arg>https://tutorialsninja.com/demo/index.php?route=account/login</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-05-06T11:35:48.112087" elapsed="0.000174"/>
+</kw>
+<status status="PASS" start="2025-05-06T11:35:47.199766" elapsed="0.912573"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-06T11:35:48.112628" elapsed="2.182341"/>
+</kw>
+<doc>Verify the My Account dropdown functionality.</doc>
+<status status="PASS" start="2025-05-06T11:35:43.780944" elapsed="6.514524"/>
+</test>
+<test id="s1-t3" name="Test Wish List Link" line="27">
+<kw name="Open Browser And Navigate To URL" owner="base">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:35:50.298083" level="INFO">Opening browser 'chrome' to base url 'https://tutorialsninja.com/demo'.</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-06T11:35:50.297872" elapsed="3.204171"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-06T11:35:53.502232" elapsed="0.045117"/>
+</kw>
+<arg>https://tutorialsninja.com/demo</arg>
+<status status="PASS" start="2025-05-06T11:35:50.297347" elapsed="3.250100"/>
+</kw>
+<kw name="Navigate To Login Page" owner="login">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:35:53.548308" level="INFO">Clicking element '//a[@title='My Account']'.</msg>
+<arg>${MY_ACCOUNT_DROPDOWN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T11:35:53.548161" elapsed="0.113945"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_OPTION}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-06T11:35:53.662315" elapsed="0.019364"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:35:53.682059" level="INFO">Clicking element 'xpath=//a[text()='Login']'.</msg>
+<arg>${LOGIN_OPTION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T11:35:53.681845" elapsed="0.292232"/>
+</kw>
+<status status="PASS" start="2025-05-06T11:35:53.547942" elapsed="0.426247"/>
+</kw>
+<kw name="Login To Account" owner="login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:35:53.975124" level="INFO">Typing text 'testUser01@test.com' into text field 'xpath=//input[@id='input-email']'.</msg>
+<arg>${LOGIN_EMAIL_FIELD}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T11:35:53.974936" elapsed="0.094281"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:35:54.069590" level="INFO">Typing text 'Test@01' into text field 'xpath=//input[@id='input-password']'.</msg>
+<arg>${LOGIN_PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T11:35:54.069383" elapsed="0.074458"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:35:54.144660" level="INFO">Clicking button 'xpath=//input[@value='Login']'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T11:35:54.144100" elapsed="0.055548"/>
+</kw>
+<arg>testUser01@test.com</arg>
+<arg>Test@01</arg>
+<status status="PASS" start="2025-05-06T11:35:53.974550" elapsed="0.225231"/>
+</kw>
+<kw name="Click HomeButton" owner="nav">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:35:54.813894" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<arg>${HOME_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-06T11:35:54.200270" elapsed="0.832511"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:35:55.033245" level="INFO">Clicking element 'xpath=//a[text()='Qafox.com']'.</msg>
+<arg>${HOME_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T11:35:55.032967" elapsed="0.259577"/>
+</kw>
+<status status="PASS" start="2025-05-06T11:35:54.200060" elapsed="1.092596"/>
+</kw>
+<kw name="Click Wish List Link And Verify" owner="nav">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${WISH_LIST_LINK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-06T11:35:55.293398" elapsed="0.024427"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:35:55.318185" level="INFO">Clicking element 'xpath=//a[@href='https://tutorialsninja.com/demo/index.php?route=account/wishlist']'.</msg>
+<arg>${WISH_LIST_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T11:35:55.317987" elapsed="0.334073"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:35:55.659374" level="INFO">${wish_list_url} = https://tutorialsninja.com/demo/index.php?route=account/wishlist</msg>
+<var>${wish_list_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2025-05-06T11:35:55.652245" elapsed="0.007173"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-06T11:35:55.659709" level="INFO">Wish List page URL: https://tutorialsninja.com/demo/index.php?route=account/wishlist</msg>
+<arg>Wish List page URL: ${wish_list_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-06T11:35:55.659561" elapsed="0.000187"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${wish_list_url}</arg>
+<arg>https://tutorialsninja.com/demo/index.php?route=account/wishlist</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-05-06T11:35:55.659832" elapsed="0.000217"/>
+</kw>
+<status status="PASS" start="2025-05-06T11:35:55.293024" elapsed="0.367118"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-06T11:35:55.660383" elapsed="2.171664"/>
+</kw>
+<doc>Verify the Wish List link functionality.</doc>
+<status status="PASS" start="2025-05-06T11:35:50.296687" elapsed="7.535793"/>
+</test>
+<test id="s1-t4" name="Test Shopping Cart Link" line="37">
+<kw name="Open Browser And Navigate To URL" owner="base">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:35:57.835341" level="INFO">Opening browser 'chrome' to base url 'https://tutorialsninja.com/demo'.</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-06T11:35:57.834438" elapsed="3.367680"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-06T11:36:01.202480" elapsed="0.031298"/>
+</kw>
+<arg>https://tutorialsninja.com/demo</arg>
+<status status="PASS" start="2025-05-06T11:35:57.833959" elapsed="3.399981"/>
+</kw>
+<kw name="Click Shopping Cart Link And Verify" owner="nav">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SHOPPING_CART_LINK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-06T11:36:01.235136" elapsed="0.032329"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:36:01.268092" level="INFO">Clicking element 'xpath=//a[@href='https://tutorialsninja.com/demo/index.php?route=checkout/cart']'.</msg>
+<arg>${SHOPPING_CART_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T11:36:01.267675" elapsed="0.294024"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:36:01.574499" level="INFO">${shopping_cart_url} = https://tutorialsninja.com/demo/index.php?route=checkout/cart</msg>
+<var>${shopping_cart_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2025-05-06T11:36:01.561872" elapsed="0.012679"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-06T11:36:01.574865" level="INFO">Shopping Cart page URL: https://tutorialsninja.com/demo/index.php?route=checkout/cart</msg>
+<arg>Shopping Cart page URL: ${shopping_cart_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-06T11:36:01.574701" elapsed="0.000206"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${shopping_cart_url}</arg>
+<arg>https://tutorialsninja.com/demo/index.php?route=checkout/cart</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-05-06T11:36:01.575288" elapsed="0.000249"/>
+</kw>
+<status status="PASS" start="2025-05-06T11:36:01.234410" elapsed="0.341292"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-06T11:36:01.576237" elapsed="2.215691"/>
+</kw>
+<doc>Verify the Shopping Cart link functionality.</doc>
+<status status="PASS" start="2025-05-06T11:35:57.833263" elapsed="5.959134"/>
+</test>
+<test id="s1-t5" name="Test Checkout Link" line="45">
+<kw name="Open Browser And Navigate To URL" owner="base">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:36:03.794074" level="INFO">Opening browser 'chrome' to base url 'https://tutorialsninja.com/demo'.</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-06T11:36:03.793934" elapsed="3.297005"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-06T11:36:07.091213" elapsed="0.036090"/>
+</kw>
+<arg>https://tutorialsninja.com/demo</arg>
+<status status="PASS" start="2025-05-06T11:36:03.793700" elapsed="3.333763"/>
+</kw>
+<kw name="Click Checkout Link And Verify" owner="nav">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:36:07.128631" level="INFO">Clicking element 'xpath=//a[@href='https://tutorialsninja.com/demo/index.php?route=checkout/checkout']'.</msg>
+<arg>${CHECKOUT_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T11:36:07.128334" elapsed="0.440618"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2025-05-06T11:36:07.581356" level="INFO">${checkout_url} = https://tutorialsninja.com/demo/index.php?route=checkout/cart</msg>
+<var>${checkout_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2025-05-06T11:36:07.569249" elapsed="0.012154"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-06T11:36:07.581703" level="INFO">Checkout page URL: https://tutorialsninja.com/demo/index.php?route=checkout/cart</msg>
+<arg>Checkout page URL: ${checkout_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-06T11:36:07.581555" elapsed="0.000188"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${checkout_url}</arg>
+<arg>https://tutorialsninja.com/demo/index.php?route=checkout/cart</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-05-06T11:36:07.581829" elapsed="0.000139"/>
+</kw>
+<status status="PASS" start="2025-05-06T11:36:07.127922" elapsed="0.454114"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-06T11:36:07.582294" elapsed="2.202195"/>
+</kw>
+<doc>Verify the Checkout link functionality.</doc>
+<status status="PASS" start="2025-05-06T11:36:03.793263" elapsed="5.991660"/>
+</test>
+<status status="PASS" start="2025-05-06T11:35:36.404628" elapsed="33.381406"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Nav Test" id="s1" pass="5" fail="0" skip="0">Nav Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,7 @@
+robotframework
+robotframework-seleniumlibrary
+robotframework-datadriver
+selenium
+pandas
+openpyxl
+webdriver-manager
